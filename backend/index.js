@@ -57,12 +57,12 @@ let uploads = Array.from({ length: 20 }, (_, i) => ({
 
 let previousUploads = JSON.parse(JSON.stringify(uploads));
 
-// REST: lista completa
+// REST
 app.get('/uploads', (req, res) => {
   res.json(uploads);
 });
 
-// ⏱️ Lógica del intervalo
+// Intervalo
 function startUpdates() {
   console.log('▶️ Iniciando intervalo de actualización...');
   intervalId = setInterval(() => {
